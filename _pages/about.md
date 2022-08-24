@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. dongwon.son110@gmail.com
+subtitle: dongwon.son110@gmail.com
 
 profile:
   align: right
@@ -23,3 +23,5 @@ I am currently a candidate for doctor's degree in [Graduate School of AI](https:
 I am interested in all the things related with create intelligent movement of the robot arm including physics simulation, rendering, vision, computational hardware, and actuator.
 
 Previously, I obtained my MSc in mechanical engineering from [Seoul National University](https://me.snu.ac.kr/) advised by [Dongjun Lee](http://inrol.snu.ac.kr/), and my Bachelor's degree in mechanical engineering from [Seoul National University](https://me.snu.ac.kr/).
+
+**[<font size="5">cv</font>](../assets/pdf/CV_Dongwon_Son_20220605.pdf)**
