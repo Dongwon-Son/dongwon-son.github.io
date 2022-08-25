@@ -18,9 +18,9 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am currently a PhD student in [Graduate School of AI](https://gsai.kaist.ac.kr/) at [KAIST](https://www.kaist.ac.kr/en/). I am in I [Intelligent mobile-manipulation (IM^2) lab](https://imsquared.github.io/) directed by [Beomjoon Kim](https://beomjoonkim.github.io/).
+I am currently a PhD student in [Graduate School of AI](https://gsai.kaist.ac.kr/) at [KAIST](https://www.kaist.ac.kr/en/). I am in [Intelligent mobile-manipulation (IM^2) lab](https://imsquared.github.io/) directed by [Beomjoon Kim](https://beomjoonkim.github.io/).
 
-I am interested in all the things related with create intelligent movement of the robot arm including physics simulation, rendering, vision, computational hardware, and actuator.
+I am interested in all the things related with creating an intelligent movement of the robot arm including physics simulation, rendering, vision, computational hardware, reinforcement learning, trajectory optimization and actuator.
 
 Previously, I obtained my Master Degree in mechanical engineering from [Seoul National University](https://me.snu.ac.kr/) under the guidance of [Dongjun Lee](http://inrol.snu.ac.kr/), and my Bachelor Degree in mechanical engineering from [Seoul National University](https://me.snu.ac.kr/). I also had worked full-time at Samsung Research, and Hanwha Techwin.
 
