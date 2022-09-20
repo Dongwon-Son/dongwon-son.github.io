@@ -24,4 +24,4 @@ I am interested in all the things related with creating an intelligent movement 
 
 Previously, I obtained my Master Degree in mechanical engineering from [Seoul National University](https://me.snu.ac.kr/) under the guidance of [Dongjun Lee](http://inrol.snu.ac.kr/), and my Bachelor Degree in mechanical engineering from [Seoul National University](https://me.snu.ac.kr/). I also had worked full-time at Samsung Research, and Hanwha Techwin.
 
-**[<font size="5">cv</font>](../assets/pdf/CV_Dongwon_Son_20220605.pdf)**
+**[<font size="5">cv</font>](../assets/pdf/CV_Dongwon_Son_20220620.pdf)**
