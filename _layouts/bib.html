@@ -142,6 +142,9 @@
           {%- if entry.url %}
             <a href="{{ entry.url }}" class="btn btn-sm z-depth-0" role="button">PAPER</a>
           {%- endif %}
+          {%- if entry.site %}
+            <a href="{{ entry.site }}" class="btn btn-sm z-depth-0" role="button">SITE</a>
+          {%- endif %}
           {%- if entry.html %}
             <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
           {%- endif %}
