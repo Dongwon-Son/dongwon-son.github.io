@@ -41,9 +41,7 @@
       institution: Samsung Research, Seoul, Korea
       year: 2020 - 2022
       description:
-        - Developed algorithms for data-driven grasping in heavily cluttered environments.
-        - Worked on sim-to-real transfer through robot control and domain randomization.
-        - Applied planning and reinforcement learning methods to object manipulation tasks.
+        - Developed robot learning algorithms for vision-based manipulation, including cluttered-scene grasping, sim-to-real transfer, planning, and data-efficient reinforcement learning.
     - title: QA Engineer, Gas Turbine Engine Division
       institution: Samsung/Hanwha Techwin, Changwon, Korea
       year: 2014 - 2017
