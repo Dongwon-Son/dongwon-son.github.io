@@ -22,6 +22,6 @@ I am currently a PhD student in [Graduate School of AI](https://gsai.kaist.ac.kr
 
 I am interested in all the things related with creating an intelligent movement of the robot arm including physics simulation, rendering, vision, computational hardware, reinforcement learning, trajectory optimization and actuator.
 
-Previously, I obtained my Master Degree in mechanical engineering from [Seoul National University](https://me.snu.ac.kr/) under the guidance of [Dongjun Lee](http://inrol.snu.ac.kr/), and my Bachelor Degree in mechanical engineering from [Seoul National University](https://me.snu.ac.kr/). I also had worked full-time at Samsung Research, and Hanwha Techwin.
+Previously, I obtained my master's degree in mechanical engineering from [Seoul National University](https://me.snu.ac.kr/) under the guidance of [Dongjun Lee](http://inrol.snu.ac.kr/), and my bachelor's degree in mechanical engineering from [Seoul National University](https://me.snu.ac.kr/). I also worked full-time at Samsung Research and Hanwha Techwin, and completed a research internship at the Allen Institute for AI (Ai2), working with Dieter Fox's robotics group.
 
 **[<font size="5">cv</font>](../assets/pdf/CV_Dongwon_Son_20250701.pdf)**
