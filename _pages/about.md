@@ -24,4 +24,4 @@ My research focuses on robot learning for manipulation, with an emphasis on comp
 
 Previously, I received my master's degree in mechanical engineering from [Seoul National University](https://me.snu.ac.kr/) under the guidance of [Dongjun Lee](http://inrol.snu.ac.kr/), and my bachelor's degree in mechanical engineering from [Seoul National University](https://me.snu.ac.kr/). I also worked full-time at Samsung Research and Hanwha Techwin, and completed a research internship at the Allen Institute for AI (Ai2), working with [Dieter Fox](https://homes.cs.washington.edu/~fox/)'s robotics group.
 
-[CV](../assets/pdf/CV_Dongwon_Son_20250701.pdf){: .btn .btn-sm .btn-outline-primary role="button" }
+[CV](../assets/pdf/CV_Dongwon_Son.pdf){: .btn .btn-sm .btn-outline-primary role="button" }

@@ -32,9 +32,11 @@
   type: time_table
   contents:
     - title: Research Intern
-      institution: Allen Institute for AI (Ai2)
+      institution: Allen Institute for AI (Ai2), Seattle, WA
+      year: 2025.10 - 2026.6
       description:
-        - Worked with <a href="https://homes.cs.washington.edu/~fox/">Dieter Fox</a>'s robotics group.
+        - Advisor/Mentor: <a href="https://homes.cs.washington.edu/~fox/">Dieter Fox</a>
+        - Worked on a torque adaptation module to reduce the sim-to-real gap.
     - title: AI Researcher, AI Methods Team
       institution: Samsung Research, Seoul, Korea
       year: 2020 - 2022
