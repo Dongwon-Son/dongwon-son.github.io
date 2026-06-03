@@ -31,20 +31,19 @@
 - title: Experience
   type: time_table
   contents:
-    - title: Research Intern
-      institution: Allen Institute for AI (Ai2), Seattle, WA
-      year: 2025.10 - 2026.6
-      description:
-        - Advisor/Mentor: <a href="https://homes.cs.washington.edu/~fox/">Dieter Fox</a>
-        - Worked on a torque adaptation module to reduce the sim-to-real gap.
+    - title: QA Engineer, Gas Turbine Engine Division
+      institution: Samsung/Hanwha Techwin, Changwon, Korea
+      year: 2014 - 2017
     - title: AI Researcher, AI Methods Team
       institution: Samsung Research, Seoul, Korea
       year: 2020 - 2022
       description:
         - Developed robot learning algorithms for vision-based manipulation, including cluttered-scene grasping, sim-to-real transfer, planning, and data-efficient reinforcement learning.
-    - title: QA Engineer, Gas Turbine Engine Division
-      institution: Samsung/Hanwha Techwin, Changwon, Korea
-      year: 2014 - 2017
+    - title: Research Intern, Robotics Group
+      institution: Allen Institute for AI (Ai2), Seattle, WA
+      year: 2025.10 - 2026.6
+      description:
+        - Worked on a torque adaptation module to reduce the sim-to-real gap under the mentorship of <a href="https://homes.cs.washington.edu/~fox/">Dieter Fox</a>.
 
 - title: Skills
   type: map
