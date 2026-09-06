@@ -1,6 +1,7 @@
 # Repository Handoff
 
 - Keep the editable CV source in `cv/Dongwon_Son_CV.tex` and publish the generated PDF at `assets/pdf/CV_Dongwon_Son.pdf`.
+- Keep CV education, experience, and publications in reverse chronological order (most recent first).
 - Keep publication metadata in `_bibliography/papers.bib`; update `_pages/publications.md` when adding a publication year not already listed.
 - Use `uv` or a Conda environment when Python tooling is needed.
 - Maintain `/Users/dongwon/experiment_processes.md` for experiment-related work.
