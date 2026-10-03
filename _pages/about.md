@@ -9,9 +9,9 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>Building #9</p>
-    <p>85, Hoegi-ro</p>
-    <p>Seoul, Korea</p>
+    <p class="profile-role">Ph.D. Student · Robotics &amp; AI</p>
+    <p>KAIST · Graduate School of AI</p>
+    <p>Seoul, South Korea</p>
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"

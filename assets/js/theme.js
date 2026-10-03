@@ -1,64 +1,40 @@
-// Has to be in the head tag, otherwise a flicker effect will occur.
-
-let toggleTheme = (theme) => {
-  if (theme == "dark") {
-    setTheme("light");
-  } else {
-    setTheme("dark");
-  }
-}
-
-
-let setTheme = (theme) =>  {
-  transTheme();
+// Apply the saved theme in the head before the page is painted.
+let syncThemeToggle = () => {
+  const button = document.getElementById("light-toggle");
+  if (!button) return;
+  const dark = document.documentElement.getAttribute("data-theme") === "dark";
+  const label = dark ? "Switch to light theme" : "Switch to dark theme";
+  button.setAttribute("aria-label", label);
+  button.setAttribute("title", label);
+  button.setAttribute("aria-pressed", String(dark));
+};
+let setHighlight = (theme) => {
+  const light = document.getElementById("highlight_theme_light");
+  const dark = document.getElementById("highlight_theme_dark");
+  if (light) light.media = theme === "dark" ? "none" : "";
+  if (dark) dark.media = theme === "dark" ? "" : "none";
+};
+let transTheme = () => {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  document.documentElement.classList.add("transition");
+  window.setTimeout(() => document.documentElement.classList.remove("transition"), 500);
+};
+let setTheme = (theme, persist = true) => {
+  if (persist) transTheme();
+  document.documentElement.setAttribute("data-theme", theme);
   setHighlight(theme);
-
-  if (theme) {
-    document.documentElement.setAttribute("data-theme", theme);
+  syncThemeToggle();
+  if (persist) {
+    try { localStorage.setItem("theme", theme); } catch (_) { /* Session-only if storage is blocked. */ }
   }
-  else {
-    document.documentElement.removeAttribute("data-theme");
-  }
-  localStorage.setItem("theme", theme);
-  
-  // Updates the background of medium-zoom overlay.
-  if (typeof medium_zoom !== 'undefined') {
-    medium_zoom.update({
-      background: getComputedStyle(document.documentElement)
-          .getPropertyValue('--global-bg-color') + 'ee',  // + 'ee' for trasparency.
-    })
+  if (typeof medium_zoom !== "undefined") {
+    medium_zoom.update({background: getComputedStyle(document.documentElement).getPropertyValue("--global-bg-color").trim() + "ee"});
   }
 };
-
-let setHighlight = (theme) => {
-  if (theme == "dark") {
-    document.getElementById("highlight_theme_light").media = "none";
-    document.getElementById("highlight_theme_dark").media = "";
-  } else {
-    document.getElementById("highlight_theme_dark").media = "none";
-    document.getElementById("highlight_theme_light").media = "";
-  }
-}
-
-
-let transTheme = () => {
-  document.documentElement.classList.add("transition");
-  window.setTimeout(() => {
-    document.documentElement.classList.remove("transition");
-  }, 500)
-}
-
-
-let initTheme = (theme) => {
-  if (theme == null || theme == 'null') {
-    const userPref = window.matchMedia;
-    if (userPref && userPref('(prefers-color-scheme: dark)').matches) {
-        theme = 'dark';
-    }
-  }
-  
-  setTheme(theme);
-}
-
-
-initTheme(localStorage.getItem("theme"));
+let toggleTheme = (theme) => setTheme(theme === "dark" ? "light" : "dark");
+let initTheme = () => {
+  let saved;
+  try { saved = localStorage.getItem("theme"); } catch (_) { /* Use the default. */ }
+  setTheme(saved === "light" || saved === "dark" ? saved : "dark", false);
+};
+initTheme();

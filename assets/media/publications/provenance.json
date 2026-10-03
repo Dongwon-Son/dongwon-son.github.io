@@ -25,39 +25,61 @@
       "key": "son2026tam",
       "name": "tam",
       "kind": "video",
-      "source_url": "https://dongwon-son.github.io/tam-project-page/assets/videos/payload_2kg_tam.mp4",
+      "source_url": "https://dongwon-son.github.io/tam-project-page/assets/videos/push_continuous.mp4",
       "source_page": "https://dongwon-son.github.io/tam-project-page/",
-      "description": "Robot manipulates a two-kilogram payload with TAM",
-      "source_sha256": "7b363d2bed5dbac65b66f612f4de3a30d99a12d105380b6618b95184fb169bd0",
-      "source_start_seconds": 3,
+      "description": "Continuous pushing with TAM: box pushing with repeated goal-pose resets",
+      "source_sha256": "9b3b7e048df1c456e455a8a2fd2cfe1a3fe7db63819f85697c9e0b1cab31e757",
+      "source_start_seconds": 4,
       "duration_seconds": 6,
-      "preview": "tam.jpg",
-      "preview_video": "tam.mp4",
+      "preview": "tam-continuous.jpg",
+      "preview_video": "tam-continuous.mp4",
       "preview_href": "https://dongwon-son.github.io/tam-project-page/",
-      "video_bytes": 69001,
-      "poster_bytes": 18655,
-      "preview_sha256": "e09d4df4a81bc687c7a99c2b79853fe74864df961231fc7e3d7ce685d3814b0d",
-      "video_sha256": "f38888506fec1c4e42b3070a91b4fa27532e12a451ec8ae8182bb3eddbd5d41a",
-      "title": "TAM: Torque Adaptation Module for Robust Motion Transfer in Manipulation"
+      "video_bytes": 106163,
+      "poster_bytes": 12184,
+      "preview_sha256": "027b572e089d35203c8cd3458bd150e7d6e448286c9f1aeae40ecadcc0a22871",
+      "video_sha256": "b49b58f28a3fc4d8896bf65eb3b1a4bf6fef33d88f6c85a23f66cf140db2aef6",
+      "title": "TAM: Torque Adaptation Module for Robust Motion Transfer in Manipulation",
+      "crop_pixels": {
+        "x": 0,
+        "y": 100,
+        "width": 720,
+        "height": 450
+      },
+      "revision_history": [
+        {
+          "date": "2026-10-04",
+          "previous_source_url": "https://dongwon-son.github.io/tam-project-page/assets/videos/payload_2kg_tam.mp4",
+          "reason": "User-selected replacement demonstration"
+        }
+      ],
+      "poster_at_preview_seconds": 1
     },
     {
       "key": "son2025NeuralSVCD",
       "name": "neuralsvcd",
       "kind": "video",
-      "source_url": "https://neuralsvcd.github.io/dish.5110e40e.mp4",
+      "source_url": "https://neuralsvcd.github.io/mining_site.0891f317.mp4",
       "source_page": "https://neuralsvcd.github.io/",
-      "description": "Collision-aware dish manipulation in simulation",
-      "source_sha256": "9da166dce085f77d43c0f1a72160e8d760a6340fad744c26f5cd7cc80dcbd71a",
-      "source_start_seconds": 1,
+      "description": "UR5 motion planning through the mining-site cave obstacles",
+      "source_sha256": "15152f3ca6bc4b1b10b17316ba2f83187298ba84dd2d85a8ccd59f07e4cfc379",
+      "source_start_seconds": 4,
       "duration_seconds": 6,
-      "preview": "neuralsvcd.jpg",
-      "preview_video": "neuralsvcd.mp4",
+      "preview": "neuralsvcd-cave.jpg",
+      "preview_video": "neuralsvcd-cave.mp4",
       "preview_href": "https://neuralsvcd.github.io/",
-      "video_bytes": 78696,
-      "poster_bytes": 27299,
-      "preview_sha256": "0bc2c675663bb7dd3e4f8fb7dd80771375bc2b05b84bdd4468a99a9c7858d739",
-      "video_sha256": "ff9988fee58dadf002a14913ba74a41e56fad562d91dd3797cbab78133eebbf1",
-      "title": "NeuralSVCD for Efficient Swept Volume Collision Detection"
+      "video_bytes": 60486,
+      "poster_bytes": 11465,
+      "preview_sha256": "344563c89cd1be575bf6b6bd4a5726771c0ca671e828ce15d4c46234116dc407",
+      "video_sha256": "8a5b62f86a4954e73703e9f6cbdc7f39b09d790560941498d62c4a8dbc534534",
+      "title": "NeuralSVCD for Efficient Swept Volume Collision Detection",
+      "revision_history": [
+        {
+          "date": "2026-10-04",
+          "previous_source_url": "https://neuralsvcd.github.io/dish.5110e40e.mp4",
+          "reason": "User-selected replacement demonstration"
+        }
+      ],
+      "poster_at_preview_seconds": 1.8
     },
     {
       "key": "son2025deforicorn",
@@ -101,20 +123,27 @@
       "key": "son2023localobject",
       "name": "locc",
       "kind": "video",
-      "source_url": "https://www.youtube.com/watch?v=LMLsQA6SxZY",
+      "source_url": "https://www.youtube.com/watch?v=yjRJDOb2bCw",
       "source_page": "https://sites.google.com/view/locc-rss2023/home",
-      "description": "LOCC simulation of non-convex objects in 30,000 environments",
-      "source_sha256": "513b2112bb4f7c4a0af65cf4f043e80d5567ea3571222a68415ca9824d96d0ff",
-      "source_start_seconds": 0,
+      "description": "Simulated Franka arms shake containers holding non-convex objects",
+      "source_sha256": "54334aa81b001a4eeb460e5d77b1b1c564dc7be741a77250bb0a6668d316dfc5",
+      "source_start_seconds": 0.3,
       "duration_seconds": 6,
-      "preview": "locc.jpg",
-      "preview_video": "locc.mp4",
+      "preview": "locc-franka.jpg",
+      "preview_video": "locc-franka.mp4",
       "preview_href": "https://sites.google.com/view/locc-rss2023/home",
-      "video_bytes": 42048,
-      "poster_bytes": 11301,
-      "preview_sha256": "0e6b71e8c01af3a53e0d0cfdfb8d5737a5c0b1acf2f05861a3c98017275a8016",
-      "video_sha256": "1bdc514aff477a0806df26ddb4ea58fb3b2696732ec440430185192aed130d59",
-      "title": "Local Object Crop Collision Network for Efficient Simulation of Non-Convex Objects in GPU-based Simulators"
+      "video_bytes": 480155,
+      "poster_bytes": 23869,
+      "preview_sha256": "49fefd5cca4ffb4534537caf8fcc9a3dae08a25ddaf70419a82bf895d81a55ad",
+      "video_sha256": "5390493e2a0fa5bfbbf590bb52583c587e2314179b518304471c00c5f79a699b",
+      "title": "Local Object Crop Collision Network for Efficient Simulation of Non-Convex Objects in GPU-based Simulators",
+      "revision_history": [
+        {
+          "date": "2026-10-04",
+          "previous_source_url": "https://www.youtube.com/watch?v=LMLsQA6SxZY",
+          "reason": "User-selected replacement demonstration"
+        }
+      ]
     },
     {
       "key": "9794590",
@@ -212,6 +241,7 @@
       "title": "Data-driven contact clustering for robot simulation"
     }
   ],
-  "total_video_bytes": 593099,
-  "total_poster_bytes": 278191
+  "total_video_bytes": 1050158,
+  "total_poster_bytes": 268454,
+  "updated": "2026-10-04"
 }

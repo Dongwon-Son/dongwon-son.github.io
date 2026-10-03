@@ -683,10 +683,11 @@ html.transition *:after {
     }
   }
   .publication-venue {
-    margin-top: 0.5rem; margin-bottom: 0.5rem;
+    display: inline-block; margin-left: 0.4rem; vertical-align: middle;
     .badge {
-      background: var(--global-theme-color); padding: 0.3rem 0.6rem;
-      a { color: white; }
+      background: var(--global-badge-bg-color); color: var(--global-badge-text-color); padding: 0.2rem 0.4rem;
+      font-size: 0.65rem; box-shadow: none;
+      a { color: var(--global-badge-text-color); }
     }
   }
 }
@@ -703,3 +704,57 @@ html.transition *:after {
 
 // Keep long publication titles clear of the right-aligned year.
 .publications h2.year { margin-bottom: 0.75rem; }
+
+// Quiet typography and controls for the personal profile.
+body { line-height: 1.6; }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--global-theme-color); outline-offset: 3px;
+}
+.post .desc { color: var(--global-text-color-light); }
+.post p a:not(.btn):hover { text-decoration: underline; }
+.profile img { box-shadow: none !important; border-radius: 6px; }
+.profile .address {
+  font-family: inherit; font-size: 0.88rem; line-height: 1.5;
+  color: var(--global-text-color-light); margin-top: 0.8rem;
+  p { display: block; margin-bottom: 0.35rem; color: inherit; }
+  .profile-role { color: var(--global-text-color); font-weight: 500; }
+}
+#light-toggle {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border: 1px solid var(--global-divider-color);
+  border-radius: 6px; flex: 0 0 40px;
+  &:hover { background: var(--global-code-bg-color); }
+}
+.post .btn-outline-primary {
+  color: var(--global-theme-color) !important; border-color: var(--global-theme-color) !important;
+  background: transparent !important; box-shadow: none !important;
+  &:hover, &:focus {
+    color: var(--global-bg-color) !important; background: var(--global-theme-color) !important;
+    border-color: var(--global-theme-color) !important;
+  }
+}
+.publications ol.bibliography li {
+  margin-bottom: 1.6rem;
+  .title { line-height: 1.45; }
+  .author, .periodical { font-size: 0.9rem; color: var(--global-text-color-light); }
+  .author > em { color: var(--global-text-color); }
+}
+.publications h2.year { color: var(--global-text-color-light); font-weight: 300; }
+.publications .publication-row .publication-venue .badge {
+  background: var(--global-badge-bg-color) !important;
+  color: var(--global-badge-text-color); font-weight: 500;
+}
+footer.fixed-bottom { border-top: 1px solid var(--global-divider-color); }
+@media (max-width: 575.98px) {
+  .profile {
+    float: none !important; margin: 0 0 1.5rem; display: grid;
+    grid-template-columns: 112px minmax(0, 1fr); gap: 1rem; align-items: center;
+    figure { margin: 0; }
+    .address { margin-top: 0; }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html.transition, html.transition *, html.transition *:before, html.transition *:after {
+    transition: none !important;
+  }
+}
