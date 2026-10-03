@@ -683,7 +683,7 @@ html.transition *:after {
     }
   }
   .publication-venue {
-    display: inline-block; margin-left: 0.4rem; vertical-align: middle;
+    display: inline-block; margin-left: 0.4rem; vertical-align: baseline;
     .badge {
       background: var(--global-badge-bg-color); color: var(--global-badge-text-color); padding: 0.2rem 0.4rem;
       font-size: 0.65rem; box-shadow: none;
@@ -742,7 +742,7 @@ a:focus-visible, button:focus-visible {
 .publications h2.year { color: var(--global-text-color-light); font-weight: 300; }
 .publications .publication-row .publication-venue .badge {
   background: var(--global-badge-bg-color) !important;
-  color: var(--global-badge-text-color); font-weight: 500;
+  color: var(--global-badge-text-color) !important; font-weight: 500;
 }
 footer.fixed-bottom { border-top: 1px solid var(--global-divider-color); }
 @media (max-width: 575.98px) {
