@@ -6,20 +6,46 @@
       "key": "son2026coda",
       "name": "coda",
       "kind": "video",
-      "source_url": "https://dongwon-son.github.io/coda-project-page/videos/custom-14.mp4",
+      "source_url": "https://dongwon-son.github.io/coda-project-page/videos/coda-speed-and-retention.mp4",
       "source_page": "https://dongwon-son.github.io/coda-project-page/",
-      "description": "Completed Scene 6 reconstruction and object decomposition",
-      "source_sha256": "5ef3dfead31aaa6d2b6fe5ce61191eb431ae26cd438431cc9b157c116931e2a6",
-      "source_start_seconds": 0,
-      "duration_seconds": 2.03,
-      "preview": "coda.jpg",
-      "preview_video": "coda.mp4",
-      "preview_href": "https://dongwon-son.github.io/coda-project-page/",
-      "video_bytes": 12509,
-      "poster_bytes": 15194,
-      "preview_sha256": "6e2b64fb6a310e95bbbac8bb7b0cc2a996172e4af49ad9f41dd0179dae3ca49b",
-      "video_sha256": "654380c80ae42f49bf1c644c10ac53e71a52b0ee32585c9a45f7e9c059c898a6",
-      "title": "CODA: Depth-Aligned Scene Completion and Object Decomposition from a Single RGB-D Image"
+      "description": "CODA completes the Scene 29 reconstruction, then tests the same objects under gravity",
+      "source_sha256": "73133fb52bf2ee2bd1f4937edadc818dec90d4ff64bdceae98c141d32ea4c186",
+      "duration_seconds": 8,
+      "preview": "coda-reconstruction-retention.jpg",
+      "preview_video": "coda-reconstruction-retention.mp4",
+      "preview_href": "https://dongwon-son.github.io/coda-project-page/#speed-comparison",
+      "video_bytes": 29979,
+      "poster_bytes": 13934,
+      "preview_sha256": "8f6e96e45f728cd38889f2c1e5bd20641fe622ea3e46237db1549290977db435",
+      "video_sha256": "c2c2df6eb60a1d33c9a654b4035f78b8617f53ae54c4247e61a94e497bb74fb9",
+      "title": "CODA: Depth-Aligned Scene Completion and Object Decomposition from a Single RGB-D Image",
+      "source_segments": [
+        {
+          "start_seconds": 2.8,
+          "end_seconds": 5.3,
+          "phase": "Gradual reconstruction"
+        },
+        {
+          "start_seconds": 37,
+          "end_seconds": 42.5,
+          "phase": "Recorded full 2-second gravity-retention test at original 0.5x playback"
+        }
+      ],
+      "crop_pixels": {
+        "x": 656,
+        "y": 106,
+        "width": 608,
+        "height": 414
+      },
+      "poster_at_preview_seconds": 2.2,
+      "editing_notes": "Concatenated excerpts preserve source order and playback speed. Crop focuses on the CODA card, retaining original method, reconstruction, gravity-test and retained-object labels. Same Custom Scene 29 / Frame 88 and 10 target objects. Outcome is this demonstration, not an aggregate retention metric. Click through to the full public comparison video.",
+      "revision_history": [
+        {
+          "date": "2026-10-03",
+          "previous_source_url": "https://dongwon-son.github.io/coda-project-page/videos/custom-14.mp4",
+          "reason": "User requested reconstruction followed by physical retention"
+        }
+      ]
     },
     {
       "key": "son2026tam",
@@ -241,7 +267,7 @@
       "title": "Data-driven contact clustering for robot simulation"
     }
   ],
-  "total_video_bytes": 1050158,
-  "total_poster_bytes": 268454,
+  "total_video_bytes": 1067628,
+  "total_poster_bytes": 267194,
   "updated": "2026-10-04"
 }
