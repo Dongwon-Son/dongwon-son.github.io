@@ -683,7 +683,8 @@ html.transition *:after {
     }
   }
   .publication-venue {
-    display: inline-block; margin-left: 0.4rem; vertical-align: baseline;
+    // Center the badge box on the visible venue/year text, whose glyphs sit above its baseline.
+    display: inline-block; margin-left: 0.4rem; vertical-align: 0.16em;
     .badge {
       background: var(--global-badge-bg-color); color: var(--global-badge-text-color); padding: 0.2rem 0.4rem;
       font-size: 0.65rem; box-shadow: none;
@@ -731,6 +732,24 @@ a:focus-visible, button:focus-visible {
   &:hover, &:focus {
     color: var(--global-bg-color) !important; background: var(--global-theme-color) !important;
     border-color: var(--global-theme-color) !important;
+  }
+}
+.cv-action { margin: 1.2rem 0 1.6rem; }
+.cv-link {
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  min-height: 40px; padding: 0.5rem 0.8rem;
+  border: 1px solid var(--global-divider-color); border-radius: 6px;
+  background: transparent; color: var(--global-text-color);
+  font-size: 0.9rem; font-weight: 500; line-height: 1.4;
+  text-decoration: none;
+  i { color: var(--global-theme-color); }
+  .cv-format {
+    padding-left: 0.55rem; border-left: 1px solid var(--global-divider-color);
+    color: var(--global-text-color-light); font-size: 0.72rem; letter-spacing: 0.03em;
+  }
+  &:hover, &:focus-visible {
+    color: var(--global-text-color); background: var(--global-code-bg-color);
+    border-color: var(--global-theme-color); text-decoration: none;
   }
 }
 .publications ol.bibliography li {
