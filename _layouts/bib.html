@@ -12,9 +12,6 @@
               <video muted loop playsinline preload="none" data-src="{{ entry.preview_video | prepend: '/assets/media/publications/' | relative_url }}" aria-hidden="true" tabindex="-1"></video>
               {%- endif -%}
             </a>
-            {%- if entry.preview_video -%}
-            <button class="preview-toggle" type="button" hidden aria-label="Play preview for {{ entry.title | escape }}" data-title="{{ entry.title | escape }}">▶</button>
-            {%- endif -%}
           </div>
         {%- endif -%}
         </div>
