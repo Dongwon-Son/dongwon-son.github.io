@@ -550,6 +550,32 @@ footer.sticky-bottom {
             border-color: var(--global-theme-color);
           }
         }
+        a.publication-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.35rem;
+          margin: 0.4rem 0.35rem 0 0;
+          padding: 0.25rem 0.55rem;
+          color: var(--global-theme-color);
+          background: transparent;
+          border-color: var(--global-divider-color);
+          border-radius: 4px;
+          font-size: 0.75rem;
+          font-weight: 500;
+          line-height: 1.5;
+          text-transform: none;
+          white-space: nowrap;
+          i { font-size: 0.8em; }
+          &:hover {
+            color: var(--global-hover-color);
+            background: var(--global-code-bg-color);
+            border-color: var(--global-theme-color);
+          }
+          &:focus-visible {
+            outline: 2px solid var(--global-theme-color);
+            outline-offset: 3px;
+          }
+        }
       }
       .hidden {
         font-size: 0.875rem;
