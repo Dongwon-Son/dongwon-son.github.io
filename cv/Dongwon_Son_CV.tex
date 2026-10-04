@@ -16,6 +16,7 @@
 \usepackage{enumitem}
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
+\hypersetup{pdfborder={0 0 0},pdflinkmargin=0pt}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -73,6 +74,12 @@
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}}
+\newcommand{\publicationItem}[2]{%
+  \item\small{%
+    \textbf{#1}:\par\nobreak\vspace{1pt}%
+    #2
+  }
+}
 
 \renewcommand{\labelitemii}{$\circ$}
 
@@ -80,6 +87,9 @@
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}}
+\newcommand{\resumeCompactListStart}{\begin{itemize}[leftmargin=*,topsep=5pt,partopsep=0pt]}
+\newcommand{\resumeCompactItemListStart}{\begin{itemize}[topsep=5pt,partopsep=0pt]}
+\newcommand{\publicationListStart}{\begin{itemize}[leftmargin=*,topsep=4pt,itemsep=9pt,parsep=0pt]}
 
 %-----------------------------
 %%%%%%  CV STARTS HERE  %%%%%%
@@ -96,20 +106,20 @@
 
 %-----------EDUCATION-----------------
 \section{~~Education}
-  \resumeSubHeadingListStart
+  \resumeCompactListStart
     \resumeSubheading
       {Korea Advanced Institute of Science and Technology (KAIST)}{Seoul, Korea}
       {Ph.D. Student - AI Graduate School - \href{https://www.hugelab.org/}{HuGe Lab} - Advisor: Beomjoon Kim}{Sep 2022 - Present}
   \resumeSubHeadingListEnd
 
-  \resumeSubHeadingListStart
+  \resumeCompactListStart
     \resumeSubheading
       {Seoul National University}{Seoul, Korea}
       {M.S. in Mechanical Engineering - Advisor: Dongjun Lee}{March 2018 - Feb 2020}
       {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Thesis:} Multi-Contact Simulator and Reinforcement Learning for Screw Tightening Tasks}}}
   \resumeSubHeadingListEnd
 
-  \resumeSubHeadingListStart
+  \resumeCompactListStart
     \resumeSubheading
       {Seoul National University}{Seoul, Korea}
       {B.S. in Mechanical Engineering}{March 2010 - Feb 2014}
@@ -117,18 +127,18 @@
 
 \vspace{4pt}
 \section{Experience}
-  \resumeSubHeadingListStart
+  \resumeCompactListStart
     \resumeSubheading
       {Allen Institute for AI (Ai2)}{Seattle, WA}
       {Research Intern, Robotics Group \textperiodcentered{} Research supervisor: \href{https://homes.cs.washington.edu/~fox/}{Dieter Fox}}{Oct 2025 - June 2026}
-      \resumeItemListStart
+      \resumeCompactItemListStart
         \resumeItem{Torque Adaptation}{Worked on a torque adaptation module to reduce the sim-to-real gap under the supervision of \href{https://homes.cs.washington.edu/~fox/}{Dieter Fox}.}
       \resumeItemListEnd
     \vspace{2pt}
     \resumeSubheading
       {Samsung Research}{Seoul, Korea}
       {AI Researcher - AI Methods Team}{Feb 2020 - June 2022}
-      \resumeItemListStart
+      \resumeCompactItemListStart
         \resumeItem{Robot Learning}{Developed robot learning algorithms for vision-based manipulation, including cluttered-scene grasping, sim-to-real transfer, planning, and data-efficient reinforcement learning.}
       \resumeItemListEnd
     \vspace{2pt}
@@ -140,34 +150,29 @@
 %-----------PUBLICATIONS-----------------
 \vspace{4pt}
 \section{Publications}
-\resumeSubHeadingListStart
+\publicationListStart
 
-\resumeSubItem{CODA: Depth-Aligned Scene Completion and Object Decomposition from a Single RGB-D Image}{\underline{Dongwon Son}, Junhyek Han, Yoontae Cho, Minseok Lee, Hong-seok Choi, Jiwook Choi, Hyungjin Kim, and Beomjoon Kim. Under review. 2026. \publicationLink{https://arxiv.org/abs/2609.25654}{Paper} \publicationLink{https://dongwon-son.github.io/coda-project-page/}{Project}}
+\publicationItem{CODA: Depth-Aligned Scene Completion and Object Decomposition from a Single RGB-D Image}{\underline{Dongwon Son}, Junhyek Han, Yoontae Cho, Minseok Lee, Hong-seok Choi, Jiwook Choi, Hyungjin Kim, and Beomjoon Kim. Under review. 2026. \mbox{\publicationLink{https://arxiv.org/abs/2609.25654}{Paper} \publicationLink{https://dongwon-son.github.io/coda-project-page/}{Project}}}
 
-\resumeSubItem{TAM: Torque Adaptation Module for Robust Motion Transfer in Manipulation}{\underline{Dongwon Son}, Florian Shkurti, Jason Lee, Naman Shah, Beomjoon Kim, and Dieter Fox. CoRL. 2026. \publicationLink{https://arxiv.org/abs/2606.06218}{Paper} \publicationLink{https://dongwon-son.github.io/tam-project-page/}{Project}}
+\publicationItem{TAM: Torque Adaptation Module for Robust Motion Transfer in Manipulation}{\underline{Dongwon Son}, Florian Shkurti, Jason Lee, Naman Shah, Beomjoon Kim, and Dieter Fox. CoRL. 2026. \mbox{\publicationLink{https://arxiv.org/abs/2606.06218}{Paper} \publicationLink{https://dongwon-son.github.io/tam-project-page/}{Project}}}
 
-\resumeSubItem{NeuralSVCD for Efficient Swept Volume Collision Detection}{\underline{Dongwon Son}, Hojin Jung, and Beomjoon Kim. CoRL. 2025. \publicationLink{https://arxiv.org/abs/2509.00499}{Paper} \publicationLink{https://neuralsvcd.github.io/}{Project}}
+\publicationItem{NeuralSVCD for Efficient Swept Volume Collision Detection}{\underline{Dongwon Son}, Hojin Jung, and Beomjoon Kim. CoRL. 2025. \mbox{\publicationLink{https://arxiv.org/abs/2509.00499}{Paper} \publicationLink{https://neuralsvcd.github.io/}{Project}}}
 
-\resumeSubItem{An Intuitive Multi-Frequency Feature Representation for SO(3)-Equivariant Networks}{\underline{Dongwon Son}, Jaehyung Kim, Sanghyeon Son, and Beomjoon Kim. ICLR. 2024. \publicationLink{https://openreview.net/forum?id=5JWAOLBxwp}{Paper} \publicationLink{https://sites.google.com/view/fer-multifrequency-so3/}{Project}}
+\publicationItem{An Intuitive Multi-Frequency Feature Representation for SO(3)-Equivariant Networks}{\underline{Dongwon Son}, Jaehyung Kim, Sanghyeon Son, and Beomjoon Kim. ICLR. 2024. \mbox{\publicationLink{https://openreview.net/forum?id=5JWAOLBxwp}{Paper} \publicationLink{https://sites.google.com/view/fer-multifrequency-so3/}{Project}}}
 
-\resumeSubItem{Preference learning for guiding the tree search in continuous POMDPs}{Jiyong Ahn, Sanghyeon Son, Dongryung Lee, Jisu Han, \underline{Dongwon Son}, and Beomjoon Kim. CoRL. 2023. \publicationLink{https://www.youtube.com/watch?v=sONwle96q-8&ab_channel=IMSquared}{Video} \publicationLink{https://openreview.net/forum?id=09UL1dCqf2n}{Paper} \publicationLink{https://sites.google.com/view/preference-guided-pomcpow?usp=sharing}{Project}}
+\publicationItem{Preference learning for guiding the tree search in continuous POMDPs}{Jiyong Ahn, Sanghyeon Son, Dongryung Lee, Jisu Han, \underline{Dongwon Son}, and Beomjoon Kim. CoRL. 2023. \mbox{\publicationLink{https://www.youtube.com/watch?v=sONwle96q-8&ab_channel=IMSquared}{Video} \publicationLink{https://openreview.net/forum?id=09UL1dCqf2n}{Paper} \publicationLink{https://sites.google.com/view/preference-guided-pomcpow?usp=sharing}{Project}}}
 
-\resumeSubItem{Local Object Crop Collision Network for Efficient Simulation of Non-Convex Objects in GPU-based Simulators}{\underline{Dongwon Son}, and Beomjoon Kim. R:SS. 2023. \publicationLink{https://www.youtube.com/playlist?list=PLtZIqgjx5N3JAhojekFJQ04wbm9-pZ2IZ}{Video} \publicationLink{https://www.roboticsproceedings.org/rss19/p033.pdf}{Paper} \publicationLink{https://sites.google.com/view/locc-rss2023/home}{Project}}
+\publicationItem{Local Object Crop Collision Network for Efficient Simulation of Non-Convex Objects in GPU-based Simulators}{\underline{Dongwon Son}, and Beomjoon Kim. R:SS. 2023. \mbox{\publicationLink{https://www.youtube.com/playlist?list=PLtZIqgjx5N3JAhojekFJQ04wbm9-pZ2IZ}{Video} \publicationLink{https://www.roboticsproceedings.org/rss19/p033.pdf}{Paper} \publicationLink{https://sites.google.com/view/locc-rss2023/home}{Project}}}
 
-\resumeSubItem{Grasping as Inference: Reactive Grasping in Heavily Cluttered Environment}{\underline{Dongwon Son}. RA-L. 2022. \publicationLink{https://youtu.be/Sj5QDR2Hwd4}{Video} \publicationLink{https://arxiv.org/pdf/2205.13146.pdf}{Paper}}
-\vspace{3pt}
+\publicationItem{Grasping as Inference: Reactive Grasping in Heavily Cluttered Environment}{\underline{Dongwon Son}. RA-L. 2022. \mbox{\publicationLink{https://youtu.be/Sj5QDR2Hwd4}{Video} \publicationLink{https://arxiv.org/pdf/2205.13146.pdf}{Paper}}}
 
-\resumeSubItem{Reinforcement Learning for Vision-based Object Manipulation with Non-parametric Policy and Action Primitives}{\underline{Dongwon Son}, Myungsin Kim, Jaechol Sim, and Wonsik Shin. IROS. 2021. \publicationLink{https://youtu.be/WLoS7OXOiVI}{Video} \publicationLink{https://ieeexplore.ieee.org/abstract/document/9636563}{Paper}}
-\vspace{3pt}
+\publicationItem{Reinforcement Learning for Vision-based Object Manipulation with Non-parametric Policy and Action Primitives}{\underline{Dongwon Son}, Myungsin Kim, Jaechol Sim, and Wonsik Shin. IROS. 2021. \mbox{\publicationLink{https://youtu.be/WLoS7OXOiVI}{Video} \publicationLink{https://ieeexplore.ieee.org/abstract/document/9636563}{Paper}}}
 
-\resumeSubItem{Sim-to-Real Transfer of Bolting Tasks with Tight Tolerance}{\underline{Dongwon Son}, Hyunsoo Yang, and Dongjun Lee. IROS. 2020. \publicationLink{https://youtu.be/y4q0JqXdil4}{Video} \publicationLink{http://ras.papercept.net/images/temp/IROS/files/1817.pdf}{Paper}}
-\vspace{3pt}
+\publicationItem{Sim-to-Real Transfer of Bolting Tasks with Tight Tolerance}{\underline{Dongwon Son}, Hyunsoo Yang, and Dongjun Lee. IROS. 2020. \mbox{\publicationLink{https://youtu.be/y4q0JqXdil4}{Video} \publicationLink{http://ras.papercept.net/images/temp/IROS/files/1817.pdf}{Paper}}}
 
-\resumeSubItem{Learnable Environment Model with Data Efficiency for MPC of Assembly Tasks}{\underline{Dongwon Son}, Hyunsoo Yang, and Dongjun Lee. IROS Workshop LRPC. 2019. \publicationLink{https://youtu.be/lk3JcWRA4vU}{Video} \publicationLink{https://drive.google.com/file/d/1X2gdzldms7g69RhxfCr3Ggxd4kQdRzxr/view}{Paper}}
-\vspace{3pt}
+\publicationItem{Learnable Environment Model with Data Efficiency for MPC of Assembly Tasks}{\underline{Dongwon Son}, Hyunsoo Yang, and Dongjun Lee. IROS Workshop LRPC. 2019. \mbox{\publicationLink{https://youtu.be/lk3JcWRA4vU}{Video} \publicationLink{https://drive.google.com/file/d/1X2gdzldms7g69RhxfCr3Ggxd4kQdRzxr/view}{Paper}}}
 
-\resumeSubItem{Data-driven Contact Clustering for Robot Simulation}{Myungsin Kim, Jaemin Yoon, \underline{Dongwon Son}, and Dongjun Lee. ICRA. 2019. \publicationLink{https://ieeexplore.ieee.org/abstract/document/8793938}{Paper}}
-\vspace{3pt}
+\publicationItem{Data-driven Contact Clustering for Robot Simulation}{Myungsin Kim, Jaemin Yoon, \underline{Dongwon Son}, and Dongjun Lee. ICRA. 2019. \mbox{\publicationLink{https://ieeexplore.ieee.org/abstract/document/8793938}{Paper}}}
 
 \resumeSubHeadingListEnd
 
