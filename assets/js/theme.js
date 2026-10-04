@@ -35,6 +35,6 @@ let toggleTheme = (theme) => setTheme(theme === "dark" ? "light" : "dark");
 let initTheme = () => {
   let saved;
   try { saved = localStorage.getItem("theme"); } catch (_) { /* Use the default. */ }
-  setTheme(saved === "light" || saved === "dark" ? saved : "dark", false);
+  setTheme(saved === "light" || saved === "dark" ? saved : "light", false);
 };
 initTheme();
