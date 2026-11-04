@@ -52,6 +52,7 @@
   \href{#1}{\textcolor{PublicationLink}{\underline{[#2]}}}%
   \endgroup
 }
+\newcommand{\publicationRef}[1]{[\ref{pub:#1}]}
 
 \newcommand{\resumeItem}[2]{
   \item\small{
@@ -74,10 +75,10 @@
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}}
-\newcommand{\publicationItem}[2]{%
-  \item\small{%
-    \textbf{#1}:\par\nobreak\vspace{1pt}%
-    #2
+\newcommand{\publicationItem}[3]{%
+  \item\label{pub:#1}\small{%
+    \textbf{#2}:\par\nobreak\vspace{1pt}%
+    #3
   }
 }
 
@@ -89,7 +90,8 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}}
 \newcommand{\resumeCompactListStart}{\begin{itemize}[leftmargin=*,topsep=5pt,partopsep=0pt]}
 \newcommand{\resumeCompactItemListStart}{\begin{itemize}[topsep=5pt,partopsep=0pt]}
-\newcommand{\publicationListStart}{\begin{itemize}[leftmargin=*,topsep=4pt,itemsep=9pt,parsep=0pt]}
+\newcommand{\publicationListStart}[1][]{\begin{enumerate}[label={[\arabic*]},ref=\arabic*,leftmargin=*,widest=11,topsep=4pt,itemsep=6pt,parsep=0pt,#1]}
+\newcommand{\publicationListEnd}{\end{enumerate}}
 
 %-----------------------------
 %%%%%%  CV STARTS HERE  %%%%%%
@@ -104,12 +106,16 @@
   \href{https://dongwon-son.github.io}{dongwon-son.github.io} \\
 \end{tabular*}
 
+\vspace{8pt}
+\textbf{Seeking research scientist and postdoctoral opportunities.}\par\vspace{5pt}
+
 %-----------EDUCATION-----------------
 \section{~~Education}
   \resumeCompactListStart
     \resumeSubheading
       {Korea Advanced Institute of Science and Technology (KAIST)}{Seoul, Korea}
       {Ph.D. Student - AI Graduate School - \href{https://www.hugelab.org/}{HuGe Lab} - Advisor: Beomjoon Kim}{Sep 2022 - Present}
+      \par\vspace{1pt}{\small\textit{Expected February 2027}}
   \resumeSubHeadingListEnd
 
   \resumeCompactListStart
@@ -129,17 +135,26 @@
 \section{Experience}
   \resumeCompactListStart
     \resumeSubheading
+      {KAIST, HuGe Lab}{Seoul, Korea}
+      {Ph.D. Research - Advisor: Beomjoon Kim}{Sep 2022 - Present}
+      \begin{itemize}[topsep=4pt,partopsep=0pt,itemsep=3pt,parsep=0pt]
+        \resumeItem{Geometry and planning}{Developed SO(3)-equivariant representations for 3D perception (FER~\publicationRef{fer}) and learned swept-volume collision models for motion planning (NeuralSVCD~\publicationRef{neuralsvcd}).}
+        \resumeItem{Scene understanding}{Contributed to depth-aligned scene completion and object decomposition from a single RGB-D image (CODA~\publicationRef{coda}).}
+        \resumeItem{Learned physics}{Developing learned physics models (LOCC~\publicationRef{locc}) as an alternative to analytical simulation, aiming to overcome its speed and accuracy limitations.}
+      \resumeItemListEnd
+    \vspace{2pt}
+    \resumeSubheading
       {Allen Institute for AI (Ai2)}{Seattle, WA}
       {Research Intern, Robotics Group \textperiodcentered{} Research supervisor: \href{https://homes.cs.washington.edu/~fox/}{Dieter Fox}}{Oct 2025 - June 2026}
       \resumeCompactItemListStart
-        \resumeItem{Torque Adaptation}{Worked on a torque adaptation module to reduce the sim-to-real gap under the supervision of \href{https://homes.cs.washington.edu/~fox/}{Dieter Fox}.}
+        \resumeItem{Torque adaptation}{Contributed to TAM~\publicationRef{tam}, a learned residual-torque module trained in randomized simulation and evaluated on real-robot manipulation under dynamics and payload mismatch.}
       \resumeItemListEnd
     \vspace{2pt}
     \resumeSubheading
       {Samsung Research}{Seoul, Korea}
       {AI Researcher - AI Methods Team}{Feb 2020 - June 2022}
       \resumeCompactItemListStart
-        \resumeItem{Robot Learning}{Developed robot learning algorithms for vision-based manipulation, including cluttered-scene grasping, sim-to-real transfer, planning, and data-efficient reinforcement learning.}
+        \resumeItem{Robot Learning}{Developed robot learning algorithms for vision-based manipulation, including cluttered-scene grasping~\publicationRef{grasping}, sim-to-real transfer, planning, and data-efficient reinforcement learning~\publicationRef{apnpql}.}
       \resumeItemListEnd
     \vspace{2pt}
     \resumeSubheading
@@ -152,61 +167,55 @@
 \section{Publications}
 \publicationListStart
 
-\publicationItem{CODA: Depth-Aligned Scene Completion and Object Decomposition from a Single RGB-D Image}{\underline{Dongwon Son}, Junhyek Han, Yoontae Cho, Minseok Lee, Hong-seok Choi, Jiwook Choi, Hyungjin Kim, and Beomjoon Kim. Under review. 2026. \mbox{\publicationLink{https://arxiv.org/abs/2609.25654}{Paper} \publicationLink{https://dongwon-son.github.io/coda-project-page/}{Project}}}
+\publicationItem{coda}{CODA: Depth-Aligned Scene Completion and Object Decomposition from a Single RGB-D Image}{\underline{Dongwon Son}, Junhyek Han, Yoontae Cho, Minseok Lee, Hong-seok Choi, Jiwook Choi, Hyungjin Kim, and Beomjoon Kim. \textbf{Under review, 2026}. \mbox{\publicationLink{https://arxiv.org/abs/2609.25654}{Paper} \publicationLink{https://dongwon-son.github.io/coda-project-page/}{Project}}}
 
-\publicationItem{TAM: Torque Adaptation Module for Robust Motion Transfer in Manipulation}{\underline{Dongwon Son}, Florian Shkurti, Jason Lee, Naman Shah, Beomjoon Kim, and Dieter Fox. CoRL. 2026. \mbox{\publicationLink{https://arxiv.org/abs/2606.06218}{Paper} \publicationLink{https://dongwon-son.github.io/tam-project-page/}{Project}}}
+\publicationItem{tam}{TAM: Torque Adaptation Module for Robust Motion Transfer in Manipulation}{\underline{Dongwon Son}, Florian Shkurti, Jason Lee, Naman Shah, Beomjoon Kim, and Dieter Fox. \textit{CoRL 2026} \textbf{(Spotlight)}. \mbox{\publicationLink{https://arxiv.org/abs/2606.06218}{Paper} \publicationLink{https://dongwon-son.github.io/tam-project-page/}{Project}}}
 
-\publicationItem{NeuralSVCD for Efficient Swept Volume Collision Detection}{\underline{Dongwon Son}, Hojin Jung, and Beomjoon Kim. CoRL. 2025. \mbox{\publicationLink{https://arxiv.org/abs/2509.00499}{Paper} \publicationLink{https://neuralsvcd.github.io/}{Project}}}
+\publicationItem{neuralsvcd}{NeuralSVCD for Efficient Swept Volume Collision Detection}{\underline{Dongwon Son}, Hojin Jung, and Beomjoon Kim. \textit{CoRL 2025}. \mbox{\publicationLink{https://arxiv.org/abs/2509.00499}{Paper} \publicationLink{https://neuralsvcd.github.io/}{Project}}}
 
-\publicationItem{An Intuitive Multi-Frequency Feature Representation for SO(3)-Equivariant Networks}{\underline{Dongwon Son}, Jaehyung Kim, Sanghyeon Son, and Beomjoon Kim. ICLR. 2024. \mbox{\publicationLink{https://openreview.net/forum?id=5JWAOLBxwp}{Paper} \publicationLink{https://sites.google.com/view/fer-multifrequency-so3/}{Project}}}
+\publicationItem{fer}{An Intuitive Multi-Frequency Feature Representation for SO(3)-Equivariant Networks}{\underline{Dongwon Son}, Jaehyung Kim, Sanghyeon Son, and Beomjoon Kim. \textit{ICLR 2024}. \mbox{\publicationLink{https://openreview.net/forum?id=5JWAOLBxwp}{Paper} \publicationLink{https://sites.google.com/view/fer-multifrequency-so3/}{Project}}}
 
-\publicationItem{Preference learning for guiding the tree search in continuous POMDPs}{Jiyong Ahn, Sanghyeon Son, Dongryung Lee, Jisu Han, \underline{Dongwon Son}, and Beomjoon Kim. CoRL. 2023. \mbox{\publicationLink{https://www.youtube.com/watch?v=sONwle96q-8&ab_channel=IMSquared}{Video} \publicationLink{https://openreview.net/forum?id=09UL1dCqf2n}{Paper} \publicationLink{https://sites.google.com/view/preference-guided-pomcpow?usp=sharing}{Project}}}
+\publicationItem{preference}{Preference learning for guiding the tree search in continuous POMDPs}{Jiyong Ahn, Sanghyeon Son, Dongryung Lee, Jisu Han, \underline{Dongwon Son}, and Beomjoon Kim. \textit{CoRL 2023}. \mbox{\publicationLink{https://www.youtube.com/watch?v=sONwle96q-8&ab_channel=IMSquared}{Video} \publicationLink{https://openreview.net/forum?id=09UL1dCqf2n}{Paper} \publicationLink{https://sites.google.com/view/preference-guided-pomcpow?usp=sharing}{Project}}}
 
-\publicationItem{Local Object Crop Collision Network for Efficient Simulation of Non-Convex Objects in GPU-based Simulators}{\underline{Dongwon Son}, and Beomjoon Kim. R:SS. 2023. \mbox{\publicationLink{https://www.youtube.com/playlist?list=PLtZIqgjx5N3JAhojekFJQ04wbm9-pZ2IZ}{Video} \publicationLink{https://www.roboticsproceedings.org/rss19/p033.pdf}{Paper} \publicationLink{https://sites.google.com/view/locc-rss2023/home}{Project}}}
+\publicationItem{locc}{Local Object Crop Collision Network for Efficient Simulation of Non-Convex Objects in GPU-based Simulators}{\underline{Dongwon Son}, and Beomjoon Kim. \textit{RSS 2023}. \mbox{\publicationLink{https://www.youtube.com/playlist?list=PLtZIqgjx5N3JAhojekFJQ04wbm9-pZ2IZ}{Video} \publicationLink{https://www.roboticsproceedings.org/rss19/p033.pdf}{Paper} \publicationLink{https://sites.google.com/view/locc-rss2023/home}{Project}}}
 
-\publicationItem{Grasping as Inference: Reactive Grasping in Heavily Cluttered Environment}{\underline{Dongwon Son}. RA-L. 2022. \mbox{\publicationLink{https://youtu.be/Sj5QDR2Hwd4}{Video} \publicationLink{https://arxiv.org/pdf/2205.13146.pdf}{Paper}}}
+\publicationItem{grasping}{Grasping as Inference: Reactive Grasping in Heavily Cluttered Environment}{\underline{Dongwon Son}. \textit{RA-L 2022}. \mbox{\publicationLink{https://youtu.be/Sj5QDR2Hwd4}{Video} \publicationLink{https://arxiv.org/pdf/2205.13146.pdf}{Paper}}}
 
-\publicationItem{Reinforcement Learning for Vision-based Object Manipulation with Non-parametric Policy and Action Primitives}{\underline{Dongwon Son}, Myungsin Kim, Jaechol Sim, and Wonsik Shin. IROS. 2021. \mbox{\publicationLink{https://youtu.be/WLoS7OXOiVI}{Video} \publicationLink{https://ieeexplore.ieee.org/abstract/document/9636563}{Paper}}}
+\publicationItem{apnpql}{Reinforcement Learning for Vision-based Object Manipulation with Non-parametric Policy and Action Primitives}{\underline{Dongwon Son}, Myungsin Kim, Jaecheol Sim, and Wonsik Shin. \textit{IROS 2021}. \mbox{\publicationLink{https://youtu.be/WLoS7OXOiVI}{Video} \publicationLink{https://ieeexplore.ieee.org/abstract/document/9636563}{Paper}}}
 
-\publicationItem{Sim-to-Real Transfer of Bolting Tasks with Tight Tolerance}{\underline{Dongwon Son}, Hyunsoo Yang, and Dongjun Lee. IROS. 2020. \mbox{\publicationLink{https://youtu.be/y4q0JqXdil4}{Video} \publicationLink{http://ras.papercept.net/images/temp/IROS/files/1817.pdf}{Paper}}}
+\publicationItem{bolting}{Sim-to-Real Transfer of Bolting Tasks with Tight Tolerance}{\underline{Dongwon Son}, Hyunsoo Yang, and Dongjun Lee. \textit{IROS 2020}. \mbox{\publicationLink{https://youtu.be/y4q0JqXdil4}{Video} \publicationLink{https://doi.org/10.1109/IROS45743.2020.9341644}{Paper}}}
 
-\publicationItem{Learnable Environment Model with Data Efficiency for MPC of Assembly Tasks}{\underline{Dongwon Son}, Hyunsoo Yang, and Dongjun Lee. IROS Workshop LRPC. 2019. \mbox{\publicationLink{https://youtu.be/lk3JcWRA4vU}{Video} \publicationLink{https://drive.google.com/file/d/1X2gdzldms7g69RhxfCr3Ggxd4kQdRzxr/view}{Paper}}}
+\publicationItem{mpcassembly}{Learnable Environment Model with Data Efficiency for MPC of Assembly Tasks}{\underline{Dongwon Son}, Hyunsoo Yang, and Dongjun Lee. \textit{IROS Workshop (LRPC) 2019}. \mbox{\publicationLink{https://youtu.be/lk3JcWRA4vU}{Video} \publicationLink{https://drive.google.com/file/d/1X2gdzldms7g69RhxfCr3Ggxd4kQdRzxr/view}{Paper}}}
 
-\publicationItem{Data-driven Contact Clustering for Robot Simulation}{Myungsin Kim, Jaemin Yoon, \underline{Dongwon Son}, and Dongjun Lee. ICRA. 2019. \mbox{\publicationLink{https://ieeexplore.ieee.org/abstract/document/8793938}{Paper}}}
+\publicationItem{contactclustering}{Data-driven Contact Clustering for Robot Simulation}{Myungsin Kim, Jaemin Yoon, \underline{Dongwon Son}, and Dongjun Lee. \textit{ICRA 2019}. \mbox{\publicationLink{https://ieeexplore.ieee.org/abstract/document/8793938}{Paper}}}
 
-\resumeSubHeadingListEnd
+\publicationListEnd
 
 \vspace{4pt}
-\section{Skills Summary}
-  \resumeSubHeadingListStart
-    \resumeSubItem{Languages}{~~~~~~Python, C++, MATLAB}
-    \resumeSubItem{Frameworks}{~~~~TensorFlow, Keras, JAX, ROS, OpenGL, PyBullet, Open3D, OMPL, FCL}
-    \resumeSubItem{Tools}{~~~~~~~~~~~~~~SolidWorks, EasyEDA}
+\section{Technical Skills}
+  \begin{itemize}[leftmargin=*,topsep=5pt,itemsep=2pt,parsep=0pt]
+    \resumeSubItem{Programming}{Python, C++, MATLAB}
+    \resumeSubItem{Machine learning}{JAX, TensorFlow, Keras}
+    \resumeSubItem{Robotics and graphics}{ROS, PyBullet, OMPL, FCL, Open3D, OpenGL}
+    \resumeSubItem{Hardware design}{SolidWorks, EasyEDA}
   \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------------
 \vspace{4pt}
-\section{Engineering Projects}
-\resumeSubHeadingListStart
-\resumeSubItem{Manipulator Identification}{Identified physics parameters for Franka Emika Panda.}
-\vspace{3pt}
-\resumeSubItem{Manipulator Controller Design}{Implemented impedance, \href{https://youtu.be/qFLTwAY7ApA}{admittance}, and compliance controllers.}
-\vspace{3pt}
-\resumeSubItem{Motor Driver Design and FOC Control}{Built PCB and MCU control stack with \href{https://youtu.be/dTuQMyJBVW8}{anticogging} and \href{https://youtu.be/YYQU_dEjNl0}{FOC control}.}
+\section{Selected Robotics Systems}
+\begin{itemize}[leftmargin=*,topsep=5pt,itemsep=5pt,parsep=0pt]
+\resumeSubItem{Robot system identification}{Estimated physical parameters of a Franka Emika Panda manipulator.}
+\resumeSubItem{Manipulator control}{Implemented impedance, \href{https://youtu.be/qFLTwAY7ApA}{admittance}, and compliance controllers.}
+\resumeSubItem{Motor-drive hardware and firmware}{Built a motor-driver PCB and MCU control stack with \href{https://youtu.be/YYQU_dEjNl0}{field-oriented control} and \href{https://youtu.be/dTuQMyJBVW8}{anticogging compensation}.}
 \resumeSubHeadingListEnd
 
 \vspace{4pt}
 \section{Research Interests}
-\begin{description}[font=$\bullet$]
-\item {Robot manipulation, including object manipulation, grasping, vision-based assembly, and long-horizon manipulation}
-\vspace{1pt}
-\item {Computationally efficient simulation, including physics engines, collision detection, and rendering}
-\vspace{1pt}
-\item {Sim-to-real transfer}
-\vspace{1pt}
-\item {Structured network design and shape representation for manipulation and planning}
-\vspace{1pt}
-\item {Open-source, cost-efficient manipulator design}
-\end{description}
+\begin{itemize}[leftmargin=*,topsep=6pt,itemsep=4pt,parsep=0pt]
+\item \textbf{Robot learning and control:} Learning-based policies and motion planning for manipulation, locomotion, and whole-body control.
+\item \textbf{3D perception and geometric representations:} Scene reconstruction, shape completion, and structured representations for collision-aware planning and interaction.
+\item \textbf{Efficient physics simulation and learned dynamics:} Collision detection, contact modeling, and dynamics learning for fast simulation and policy training.
+\item \textbf{Sim-to-real transfer and adaptation:} System identification, actuation modeling, and learning-based adaptive control for robust deployment across robots and operating conditions.
+\end{itemize}
 
 \end{document}

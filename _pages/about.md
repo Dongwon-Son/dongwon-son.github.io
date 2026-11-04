@@ -18,7 +18,9 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am currently a PhD student in the [Graduate School of AI](https://gsai.kaist.ac.kr/) at [KAIST](https://www.kaist.ac.kr/en/). I am in [HuGe Lab](https://www.hugelab.org/) directed by [Beomjoon Kim](https://beomjoonkim.github.io/).
+I am currently a PhD student in the [Graduate School of AI](https://gsai.kaist.ac.kr/) at [KAIST](https://www.kaist.ac.kr/en/). I am in [HuGe Lab](https://www.hugelab.org/) directed by [Beomjoon Kim](https://beomjoonkim.github.io/). I expect to complete my PhD in February 2027.
+
+**Seeking research scientist and postdoctoral opportunities.**
 
 My research focuses on robot learning for manipulation, with an emphasis on computationally efficient simulation, planning, and sim-to-real transfer.
 
