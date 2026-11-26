@@ -3,6 +3,32 @@
   "notes": "Public sources only. Video-only MP4 loops used as efficient GIF-like previews. Figure previews reproduce Figure 1. Source excerpts visually inspected. YouTube downloads used documented default runtime and publicly available video-only formats without cookies. No unpublished local attachments used.",
   "publications": [
     {
+      "key": "son2026palettesim",
+      "name": "palettesim",
+      "kind": "video",
+      "source_url": "https://dongwon-son.github.io/palettesim/assets/hero-dense.mp4?v=hero2",
+      "source_page": "https://dongwon-son.github.io/palettesim/",
+      "description": "Humanoid and quadruped robots walking in parallel in PaletteSim",
+      "source_sha256": "33f4170e40a737c04b39aa475ff02a727a3516cc93d6f560f063c88e567f8b1c",
+      "source_start_seconds": 0,
+      "duration_seconds": 7.333333,
+      "preview": "palettesim-parallel-robots.jpg",
+      "preview_video": "palettesim-parallel-robots.mp4",
+      "preview_href": "https://dongwon-son.github.io/palettesim/",
+      "video_bytes": 345081,
+      "poster_bytes": 33147,
+      "preview_sha256": "49071ea2e6d15282d66e59f3e2e2766eadda915d743b15b38ba610de492a324e",
+      "video_sha256": "487e4eb535c8fbf20722a531858051600707595e9fbdc16fc530b32f1023bb56",
+      "title": "PaletteSim: Fast Multi-Engine Neural Simulation",
+      "crop_pixels": {
+        "x": 96,
+        "y": 0,
+        "width": 1728,
+        "height": 1080
+      },
+      "poster_at_preview_seconds": 1.4
+    },
+    {
       "key": "son2026coda",
       "name": "coda",
       "kind": "video",
