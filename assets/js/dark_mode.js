@@ -1,6 +1,1 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const button = document.getElementById("light-toggle");
-  if (!button) return;
-  syncThemeToggle();
-  button.addEventListener("click", () => toggleTheme(document.documentElement.getAttribute("data-theme")));
-});
+document.addEventListener("DOMContentLoaded",()=>{const e=document.getElementById("light-toggle");e&&(syncThemeToggle(),e.addEventListener("click",()=>toggleTheme(document.documentElement.getAttribute("data-theme"))))});
